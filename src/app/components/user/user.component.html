@@ -1,0 +1,55 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        </button>
+        <a class="navbar-brand" href="#">Logo</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav col-sm-2">
+          <li class="active"><a href="#">Library Name</a></li>
+        </ul>
+            <input class="form-control col-sm-4" type="text" placeholder="Search" aria-label="Search" style="width:40%">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="containter-fluid text-center">
+      <div class="row-content">
+        <div class="col-sm-2 sidenav">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active" routerLink="/dashboard">
+                    Home <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      Manage Books
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="/user">
+                      User Details
+                    </a>
+                  </li>
+            </ul>
+        </div>
+      </div>
+  </div>
+  <div class="col-sm-10">
+    <table style="margin-top:10px; background-color: lightsteelblue" >
+        <tr>
+          <th>User Name</th>
+          <th>Email/th>
+          <th>Phone No</th>
+        </tr>
+        <tr *ngFor="let data of Userlist"> 
+          <td>{{data.name}}</td>
+          <td>{{data.uemail}}</td>
+          <td>{{data.phoneno}}</td>
+        </tr>
+      </table>
+  </div>

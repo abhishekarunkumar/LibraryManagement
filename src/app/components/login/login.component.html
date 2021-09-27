@@ -1,0 +1,46 @@
+        <div class="text-center">
+        <div class="container" id="main">
+            <div class="row justify-content-center">
+                <div class="col-sm-8">
+                    <div class="panel panel-default" >
+                        <div class="panel-heading" style="background-color: cornflowerblue;">
+                            <h4>User Sign In</h4>
+                        </div>
+                        <form name="form" [formGroup]="form" (ngSubmit)="login()">
+                            <div class="panel-body">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 control-label">Email</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control" placeholder="Email Address" formControlName="email" autocomplete="off"
+                                       [ngClass]="{'is-invalid':submitted && form.get('email').invalid}">
+                                    </div>
+                                    <div class="col-sm-6" *ngIf="submitted && form.get('email').invalid" class="error">
+                                        <span *ngIf="form.get('email').errors.required">Email is required</span> <br>
+                                        <span *ngIf="form.get('email').errors.email">Email is Invaild</span>       
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 control-label">Password</label>
+                                    <div class="col-sm-5">
+                                        <input type="password" name="password" class="form-control" formControlName="password" autocomplete="off" placeholder="Password"
+                                        [ngClass]="{'is-invalid':submitted && form.get('password').invalid}">
+                                    </div>
+                                    <div class="col-sm-6" *ngIf="submitted && form.get('password').invalid" class="error">
+                                        <span *ngIf="form.get('password').errors.required">Password is required</span> <br>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 offset-3">
+                                    <button class="btn btn-primary">Login</button>
+                                    <a href="#" class="btn btn-link">Forgot Password?</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div><br>
+                        <a routerLink="/admin"><button class="btn btn-success">Admin Login</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    

@@ -1,0 +1,14 @@
+.card-header
+{
+    background-color:steelblue;
+}
+
+#main{
+    max-width: 900px;
+    margin-right: 89px;
+    padding-top:80px;
+}
+
+.error{
+    color:red;
+}
