@@ -67,10 +67,6 @@ export class DashboardComponent implements OnInit {
   }
 
   _borrow(){
-    if(this.borrowlist.length > 3 ){
-      alert("You cannot borrow more than 3 books");
-    }
-    else{
       this._dash.borrow_Books(this.borrowlist);
       this.route.navigateByUrl('/borrow');
     }
